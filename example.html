@@ -1,0 +1,54 @@
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>JSOW Demo</title>
+		<script src="jsow.js"></script>				
+		<link rel="stylesheet" href="jsow.css"/>
+	</head>
+<body>
+	<h1>A JSOW Demo</h1>
+	<script>
+	//create some widgets
+	//WidgetMgr.createWidget([NAME], [OPTS],[UNIQUEID]);
+	
+	//An empty window : 
+	WidgetMgr.createWidget("Basic empty Window", {position:{x:20,y:500},minWidth:500,minHeight:500});
+	
+
+	WidgetMgr.createWidget("Lorem Window ?",      {position:{x:800,y:500},smartResize:true,minWidth:100},"Awesome");
+	var videoWidget = WidgetMgr.createWidget("Video Window",{position:{x:300,y:250},minWidth:100,minHeight:150,smartResize:true,resizable:false},"buttons");
+	
+	//populate them
+	//create a window with a button
+	var customButton = document.createElement("BUTTON");
+	customButton.style="width:100%;min-height:25px;min-width:50px;";
+	customButton.innerHTML="Add a youtube video";
+	customButton.onclick=function(){
+			var videoDiv = document.createElement("DIV");
+			videoDiv.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/8l-La9HEUIU?autoplay=1" frameborder="0" allowfullscreen></iframe>';
+			videoWidget.add(videoDiv);
+			};
+	videoWidget.add(customButton);
+	
+	</script>
+	
+	<!-- Create a node and move it to a widget-->
+	<div id='Movable'><!-- This div will be moved in the "Awesome" widget-->
+	<h2>
+	</h2>
+	<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas.<br> Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.<br> <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo.<br> Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi.<br> Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+	</div>
+	<button onclick="WidgetMgr.widgets['Awesome'].add(document.getElementById('Movable'));">Lorem Ipsum --> Lorem Window</button>
+	
+	<!-- And now without any button -->
+	<div id="magnificient" >
+		<h2>A magnificent window</h2>
+		<button style="width:33%">Hello</button><button style="width:33%">Hello</button><button style="width:33%">Hello</button><br>
+		<textarea style="width:100%"></textarea>
+	</div>
+	<script>
+		var widget = WidgetMgr.createWidget("A magnificent Window",{position:{x:400,y:500},minWidth:200,minHeight:200});
+		widget.add(document.getElementById("magnificient"));
+	</script>
+</body>
+</html>
