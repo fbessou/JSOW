@@ -1,0 +1,94 @@
+
+.widget
+{
+	float:left;
+	position:absolute;
+	background:#dedede bottom right no-repeat;
+	padding:0;
+	border-radius:9px 9px 6px 6px;
+	border:1px solid black;
+	box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.5);
+	min-height:20px;
+}
+.widget .widgetHeader
+{
+	color:black;
+	width:100%;
+	position:absolute;
+	background:	url("../images/header.png") repeat-x;
+	max-height:20px;
+	height:20px;
+	border-radius:10px 10px 0 0;
+	border-color:#fff;
+	/*text-align:center;*/
+	font-size:12px;
+	font-weight:bold;
+	text-shadow:0px -1px 1px white;
+	cursor:inherit;
+	overflow:hidden;
+}
+.widget .headerButtons
+{
+	margin-top:2px;
+}
+.widget .headerRight
+{
+	float:right;
+	width:30px;
+	height:20px;
+	background:url("../images/headerRight.png");
+	position:absolute;
+	top :0;
+	right:0;
+}
+.widget .widgetContent
+{
+	overflow:hidden;
+	margin:10px;
+	margin-top:26px;
+}
+.widget .widgetMinimize
+{
+	width:15px;
+	height:15px;
+	line-height:12px;
+	float:left;
+	background:url("../images/minimize.png") no-repeat;
+	margin-left:3px;
+}
+.widget .widgetMinimize:hover
+{
+	background:url("../images/minimizeHover.png") no-repeat;
+}
+.widget .widgetClose
+{
+	width:15px;
+	height:15px;
+	line-height:12px;
+	float:left;
+	background:url("../images/close.png") no-repeat;
+	margin-left:3px;
+}
+.widget .widgetClose:hover
+{ 
+	background:url("../images/closeHover.png") no-repeat;
+}
+.widget .widgetTitle
+{
+	white-space: nowrap;
+	/*text-align:center;*/
+	overflow:hidden;
+	text-overflow:ellipsis;
+	max-height: inherit;
+	padding-left:5px;
+	margin-right:10px;
+}
+.widget .widgetContent .sizeHelper
+{
+	display:inline-block;
+	margin:0;
+}
+.widgetBackground
+{
+	background:#ddd ;
+}
