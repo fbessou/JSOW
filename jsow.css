@@ -15,7 +15,7 @@
 	color:black;
 	width:100%;
 	position:absolute;
-	background:	url("../images/header.png") repeat-x;
+	background:	url("./images/header.png") repeat-x;
 	max-height:20px;
 	height:20px;
 	border-radius:10px 10px 0 0;
@@ -36,7 +36,7 @@
 	float:right;
 	width:30px;
 	height:20px;
-	background:url("../images/headerRight.png");
+	background:url("./images/headerRight.png");
 	position:absolute;
 	top :0;
 	right:0;
@@ -53,12 +53,12 @@
 	height:15px;
 	line-height:12px;
 	float:left;
-	background:url("../images/minimize.png") no-repeat;
+	background:url("./images/minimize.png") no-repeat;
 	margin-left:3px;
 }
 .widget .widgetMinimize:hover
 {
-	background:url("../images/minimizeHover.png") no-repeat;
+	background:url("./images/minimizeHover.png") no-repeat;
 }
 .widget .widgetClose
 {
@@ -66,12 +66,12 @@
 	height:15px;
 	line-height:12px;
 	float:left;
-	background:url("../images/close.png") no-repeat;
+	background:url("./images/close.png") no-repeat;
 	margin-left:3px;
 }
 .widget .widgetClose:hover
 { 
-	background:url("../images/closeHover.png") no-repeat;
+	background:url("./images/closeHover.png") no-repeat;
 }
 .widget .widgetTitle
 {
